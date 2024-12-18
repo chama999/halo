@@ -62,6 +62,7 @@ project/
 # 5. How to run the tests
 After cloning the repository and installed the dependencies, execute below commands to run tests:
 
+* E2E Testing headless mode: npx playwright test
 * E2E Testing in headed mode: npx playwright test --headed
 * Run only: performance and accessibility tests with lighthouse: npx playwright test --project=performance
 
