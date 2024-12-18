@@ -6,11 +6,11 @@ export default defineConfig({
     ['html', { open: 'never', outputFolder: 'html-report' }]
   ],
   use: {
-    baseURL: 'https://automationexercise.com', // URL base si la necesitas
-    headless: true, // Si quieres que las pruebas se ejecuten en modo headless (sin UI)
-    screenshot: 'only-on-failure', // Tomar capturas de pantalla solo si la prueba falla
-    video: 'retain-on-failure', // Grabar video solo si la prueba falla
-    trace: 'retain-on-failure', // Grabar trazas solo si la prueba falla
+    baseURL: 'https://automationexercise.com', // base url
+    headless: true, // headless mode as default
+    screenshot: 'only-on-failure', // screenshot when failing
+    video: 'retain-on-failure', // recording configuration
+    trace: 'retain-on-failure', // trace
 
   },
   projects: [
@@ -43,21 +43,21 @@ export default defineConfig({
         testMatch: '**/e2e/**/*.spec.ts', // Match tests in the e2e folder
       },
       {
-        name: 'ios', // Pruebas en Chromium (Google Chrome)
-        use: { ...devices['iPhone 15 Pro Max'] }, // Usar el dispositivo de escritorio de Chrome
-        testMatch: '**/e2e/**/*.spec.ts',  // Directorio específico para las pruebas de rendimiento
+        name: 'ios', // iso project
+        use: { ...devices['iPhone 15 Pro Max'] }, // selected one iphone device
+        testMatch: '**/e2e/**/*.spec.ts', 
   
       },
       {
-        name: 'android', // Pruebas en Chromium (Google Chrome)
-        use: { ...devices['Pixel 7'] }, // Usar el dispositivo de escritorio de Chrome
-        testMatch: '**//e2e/**/*.spec.ts',  // Directorio específico para las pruebas de rendimiento
+        name: 'android', // android device project
+        use: { ...devices['Pixel 7'] }, 
+        testMatch: '**//e2e/**/*.spec.ts', 
       },
        {
-        name: 'performance',  // Proyecto de pruebas de rendimiento (puede ser solo para pruebas de performance)
-        testMatch: '**/performance/**/*.spec.ts',  // Directorio específico para las pruebas de rendimiento
+        name: 'performance',  //performance and accessibility with lighthouse project
+        testMatch: '**/performance/**/*.spec.ts',  
         use: {
-          ...devices['Desktop Chrome'],  // Usar el dispositivo de escritorio de Chrome
+          ...devices['Desktop Chrome'],  
         },
       },
   ],
