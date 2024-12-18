@@ -1,7 +1,8 @@
 ## Repo for Apply digital ##
 # 1. Framework Selection:
-### Selected Playwright as test automation framework ###
-### Because I feel most confortable using it as it is the latest test framework that I have been using in my currents projects ###
+ * Selected test automation framework: PLAYWRIGHT.
+ * Reason: I feel most comfortable using it as it is the latest test framework that I have been using in my currents projects.
+ * Stack: Playwright, Typescript, Page object model, lighthouse, faker.
 
 Test cases:
 
@@ -16,11 +17,51 @@ Test cases:
 | 7  | Login with invalid credentials   |  | 1. Navigate to Login page. 2. Set invalid credentials and click on Login button.  | System shows an error "Your email or password is incorrect!" |
 | 8  | Registering with duplicated email   | User is already registered.  | 1. Navigate to Login Page 2. Complete username and email, then click on Sign Up  | System displays an error "User already exists."  |
 | 9  | Success product purchase flow | User is logged   | 1. Click on Products link page. 2. Click on View Details link 3. Set product quantity and click on Add to Cart 4. Click on Process to Checkout button. 5. Click on Place Order button 6. Complete payments details (Name on Card, Card Number, CVC and Expiration), then click on Pay and Confirm Order button. | 1. User sees a green message on the page "Your order has been placed successfully!" 2. System redirects users to payment done page and displays confirmation message and 2 buttons ("Download Invoice" and "continue")  |
+|10 | Logout | User is logged | 1. Click on Logout | System redirect to login page | 
 
-Automated test cases:
+# 2. Automated test cases:
 
-1. Test case number 1: User signs up. [PRE-CONDITION]
-2. Test case number 9: Success product purchase flow.
-3. Performance and accessibility test. For this test cases we added lighthouse dependencies to the automation project.
+1. TC 1: [PRE-CONDITION] User signs up.
+2. TC 9: Success product purchase flow.
+3. Performance and accessibility test.
+4. TC 10: [POST-CONDITION] Logout
 
+
+# 3. Project structure:
+
+project/
+├── src/
+│   ├── pages/
+│   │   ├── cart.page.ts
+│   │   ├── checkout.page.ts
+│   │   ├── home.page.ts
+│   │   ├── login.page.ts
+│   │   ├── payment.page.ts
+│   │   ├── product.page.ts
+│   ├── tests/
+│   │   ├── purchase.spec.ts
+│   │   ├── performance.spec.ts
+│   ├── utils/
+│   │   └── data-generator.ts
+├── lighthouse-reports/
+├── package.json
+├── playwright.config.ts
+├── readme.md
+├── tsconfig.json
+└── package-lock.json
+
+
+# 4. Setup
+
+1. Create a folder and open the terminal in that folder.
+2. execute:  git clone https://github.com/chama999/apply-digital
+3. execute: cd apply-digital
+4. execute: npm install
+5. execute: npx playwright install 
+
+# 5. How to run the tests
+After cloning the repository and installed the dependencies, execute below commands to run tests:
+
+* E2E Testing in headed mode: npx playwright test --headed --project=e2e
+* Run performance and accessibility tests with lighthouse: npx playwright test --project=performance
 

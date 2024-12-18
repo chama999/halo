@@ -1,0 +1,23 @@
+{
+  "name": "apply-digital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-launcher": "^1.1.2",
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "@playwright/test": "^1.49.1",
+    "lighthouse": "^12.3.0",
+    "playwright-lighthouse": "^4.0.0",
+    "typescript": "^5.7.2"
+  }
+}
