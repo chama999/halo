@@ -28,7 +28,7 @@ Test cases:
 
 
 # 3. Project structure:
-
+```
 project/
 ├── src/
 │   ├── pages/
@@ -49,7 +49,7 @@ project/
 ├── readme.md
 ├── tsconfig.json
 └── package-lock.json
-
+```
 
 # 4. Setup
 
