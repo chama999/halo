@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-
 const thresholds = {
   performance: 80,
       accessibility: 50,
@@ -8,7 +7,6 @@ const thresholds = {
       seo: 50,
       pwa: 50
 }
-
 
 test.describe('Lighthouse Performance and Accessibility Tests', () => {
   test('Home Page', async ({  playwright }) => {

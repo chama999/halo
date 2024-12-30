@@ -10,7 +10,6 @@
         passwordInput: 'input[data-qa="login-password"]',
         loginButton: 'button[type="submit"]',
     }
-
     //signUpLocators
     public signUpLocators= {
         usernameInput: 'input[data-qa="signup-name"]',

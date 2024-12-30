@@ -1,6 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-
 //generating a random use, with random data produced by faker library
 export const randomUser =  {
     email: () => faker.internet.email(),
@@ -23,7 +22,6 @@ export const cardPaymentInformation =  {
     expiryMonth: () => (faker.date.past().getMonth() + 1).toString().padStart(2, '0'),
     expiryYear: () => faker.date.past().getFullYear()
 }
-
 
 // it can produce a random number to use in our testing, so to not select the same product always.
 // faker.number.int({min: 1, max: 30})

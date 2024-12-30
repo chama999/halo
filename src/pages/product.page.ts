@@ -9,6 +9,7 @@ export class ProductPage {
     addToCartButton: 'div.product-information button.cart[type="button"]',
     viewProductButton: (productIndex: number) => `a[href="/product_details/${productIndex}"]`,
   }
+  
   async navigateToProductsPage() {
     // it looks for the link to products page and click on it.
     await this.page.click('a[href="/products"]');

@@ -11,7 +11,6 @@ export class CartPage {
 
   // this async function navigate users to cart page.
   async navigateToCartPage() { await this.page.click(this.locators.cartPageLink) }
-
   // below function navigate users to checkout page by clicking on the Proceed to checkout button. 
   async proceedToCheckout() {
     //Just for using different type of selectors.

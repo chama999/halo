@@ -6,7 +6,7 @@ import {randomUser} from '../../utils/data-generator';
 import { LoginPage } from '../../pages/login.page';
 import { PaymentPage } from '../../pages/payment.page';
 
-//Pre-condition
+//Pre-conditions
 test.beforeEach('Register and login user', async ({page}) => {
 
   //Initializing loginPage.

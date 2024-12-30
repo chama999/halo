@@ -1,5 +1,6 @@
 import { Page } from 'playwright';
 import {cardPaymentInformation} from '../utils/data-generator'
+
 export class PaymentPage {
   constructor(private page: Page) {}
   public locators = {
